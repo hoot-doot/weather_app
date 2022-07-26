@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidenav {
+    width: 0; 
+    position: fixed; 
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);  
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 0px 8px 5px #888888;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    height: 100vh; 
+  
+}
+
+.desc {
+    margin-left: 10%;
+}
+
+.sidenav p{
+    font-size: 18px;
+    color: #818181;
+    display: inline;
+    transition: 0.3s;
+    line-height: 40px;
+    margin-left: 5px;
+}
+
+
+.sidenav .closebtn {
+  top: 1%;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  color: black;
+}
+.mainthing {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    padding: 7em 3em 2em 2em;
+    right: 0;
+    opacity: 0.7;
+    transition: opacity 230ms ease-in-out;
+}
+.mainthing:hover {
+    opacity: 1; 
+    right: 5px;
+  }
+
+.sidenav {
+    display: grid;
+    grid-template-columns: 40vh;
+    grid-template-rows: 10vh;
+    text-align: left;
+    justify-content: center;
+
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+.weather-app {
+    height: 95vh;
+    width: 100%;
+    background-image: url(./pics/setfr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+.grid{
+    padding: 24em 3% 4em 10%;
+    display: grid;
+
+    grid-template-columns: 28vh 23vh;
+
+    
+}
+.icon{
+    padding-top: 9%;
+}
+
+
+.temp{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15vh;
+    text-shadow: 0 0 7px rgb(136, 136, 136);;
+    color: #FFFFFF;}
+
+
+.city {
+    text-align: center;
+    padding-top: 0%;
+    text-shadow: 0 0 10px rgb(95, 95, 95);;
+    grid-column: span 2;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7vh;
+    line-height: 80px;
+    color: #FFFFFF;
+}
+
+.weather {
+    text-align: center;
+    grid-column: span 2;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 3vh;
+    font-weight: 200;
+    color: #FFFFFF;
+}
+
+.dashboard{
+    box-shadow: 10px 10px 8px 10px#3f3f3f;
+    background-color: #d0d0d0;
+}
+
+.timeperiod{
+    padding: 3em 15% 3em 15%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15vh, 1fr));
+    grid-gap: 40px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 3vh;
+    font-weight: 200;
+
+}
+
+.timeperiod div{
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.75rem 0.175rem;
+    padding: 10%;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.nextdays{
+    padding: 2em 50% 2em 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33vh, 1fr));
+    line-height: 45px;
+    grid-gap: 5%;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 3vh;
+    font-weight: 200;
+}
+.nextdays div{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.15rem 0.5rem, rgba(0, 0, 0, 0.1) 0px 0.075rem 0.175rem;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10%;
+}
+
+
+.timeperiod{
+    background-color: #ebebeb;
+    box-shadow: 5px 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.nextdays{
+    background-color: #ffffff;
+    box-shadow: 5px 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.contact {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    bottom: 0;
+
+
+}
+
+
+.social-icons {
+    bottom: 0;
+    padding: 10px 10px 10px 10px;
+    border-radius: 40px 40px 10px 10px;
+    margin: 3% 40% 0% 40%;
+    background-color:#ffffff;
+    display:flex;
+    justify-content: center;
+}
+
+.social-icons a{
+    background-color:#5e5e5e;
+    font-size:16px;
+    width:50px;
+    height: 50px;;
+    margin-right:8px;
+    border-radius:100%;
+    transition:all .2s linear;
+}
+
+.social-icons a.github:hover
+{
+background-color:#ffffff
+}
+
+.social-icons a.youtube:hover
+{
+background-color:#FF0000
+}
+.social-icons a.linkedin:hover
+{
+background-color:#007bb6
+}
+
+
