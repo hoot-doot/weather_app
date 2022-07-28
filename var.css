@@ -22,26 +22,18 @@
   
 }
 
-.desc {
-    margin-left: 10%;
-}
-
 .sidenav p{
-    font-size: 18px;
+    font-size: 21px;
     color: #818181;
     display: inline;
     transition: 0.3s;
-    line-height: 40px;
-    margin-left: 5px;
+    line-height: 50px;
 }
 
 
 .sidenav .closebtn {
-  top: 1%;
-  font-size: 30px;
-  margin-bottom: 20px;
-  margin-left: 10%;
-  color: black;
+  font-size: 25px;
+  color: #434343;
 }
 .mainthing {
     position: fixed;
@@ -58,28 +50,33 @@
   }
 
 .sidenav {
-    display: grid;
-    grid-template-columns: 40vh;
-    grid-template-rows: 10vh;
-    text-align: left;
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
 
+.desc {
+    margin-right: 10%;
 }
 
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+@media only screen and (max-width: 600px) {
+
+    .sidenav p {font-size: 15px;
+    line-height: 35px;}
+    .mainthing {width:120px; height:40px;
+        padding-right: 3%;
+    }
+    }
 
 
 
 
 
-.weather-app {
+.weather_app {
     height: 95vh;
     width: 100%;
-    background-image: url(./pics/setfr.png);
+    background-image: url(./pics/risefr.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -88,16 +85,23 @@
 
 
 .grid{
+    background-image : url();
+    background-size: 100%;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-position:  top 10px;
     padding: 24em 3% 4em 10%;
     display: grid;
-
     grid-template-columns: 28vh 23vh;
+    /* grid-template-columns: 50% 50%; */
 
     
 }
-.icon{
-    padding-top: 9%;
+
+#icon{
+    padding-top: 15%;
 }
+
 
 
 .temp{
@@ -132,9 +136,24 @@
     color: #FFFFFF;
 }
 
+@media only screen and (max-width: 600px) {
+    .grid{
+            grid-template-columns: 50% 50%;
+    }
+    #icon {height: 65%;
+    width: 65%;
+    padding-top: 10%;}
+    .temp{font-size: 10vh;
+    padding-left: 10%;}
+    .city {font-size: 4vh;
+        padding-right: 20%;}
+    .weather{font-size: 3vh;
+        padding-right: 20%;}
+    }
+
 .dashboard{
     box-shadow: 10px 10px 8px 10px#3f3f3f;
-    background-color: #d0d0d0;
+    background-color: #767676;
 }
 
 .timeperiod{
@@ -158,11 +177,15 @@
     border-radius: 10px;
 }
 
+.timeperiod div:hover{
+    background-color: #939393;
+    color: #ffffff;
+}
+
 .nextdays{
-    padding: 2em 50% 2em 50%;
+    padding: 2em 25% 2em 25%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33vh, 1fr));
-    line-height: 45px;
     grid-gap: 5%;
     justify-content: center;
     text-align: center;
@@ -189,35 +212,25 @@
 }
 
 
-.contact {
-    margin-top: 70px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 1fr);
-    justify-content: center;
-    text-align: center;
-    z-index: 1;
-    bottom: 0;
-
-
-}
-
-
 .social-icons {
     bottom: 0;
-    padding: 10px 10px 10px 10px;
-    border-radius: 40px 40px 10px 10px;
-    margin: 3% 40% 0% 40%;
-    background-color:#ffffff;
+    /* margin: 2% 40% 0% 40%; */
+    padding: 20px;
+    /* border-radius: 40px 40px 0px 0px; */
+    /* background-color:#ffffff; */
+    z-index: 2;
     display:flex;
     justify-content: center;
+    border-bottom:10px solid #3f3f3f;
+    /* box-shadow: 5px 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .social-icons a{
     background-color:#5e5e5e;
     font-size:16px;
     width:50px;
+    margin: 5px;
     height: 50px;;
-    margin-right:8px;
     border-radius:100%;
     transition:all .2s linear;
 }
@@ -226,7 +239,6 @@
 {
 background-color:#ffffff
 }
-
 .social-icons a.youtube:hover
 {
 background-color:#FF0000
