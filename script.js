@@ -13,7 +13,7 @@ function closeNav() {
 
 (function weather_api() {
   // self executing function to call api
-let file = "https://api.openweathermap.org/data/2.5/onecall?lat=29.3088&lon=80.5911&units=metric&exclude=minutely,alerts&appid=b40d8f05585be5b580c1098cd73754d7";
+let file = "https://api.openweathermap.org/data/2.5/onecall?lat=29.3088&lon=80.5911&units=metric&exclude=minutely,alerts&appid=" + apikey;
 fetch(file) // gets data
 .then((response) => response.json()) // converts to json
 .then((data) => {
