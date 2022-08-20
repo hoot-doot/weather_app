@@ -23,7 +23,9 @@
 }
 
 .sidenav p{
-    font-size: 21px;
+    font-family: 'Inter';
+    font-style: 'light';
+    font-size: 18px;
     color: #818181;
     display: inline;
     transition: 0.3s;
@@ -56,7 +58,7 @@
 }
 
 .desc {
-    margin-right: 10%;
+    margin-right: 15%;
 }
 
 
@@ -71,8 +73,6 @@
 
 
 
-
-
 .weather_app {
     height: 95vh;
     width: 100%;
@@ -80,22 +80,38 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
 }
 
 
 .grid{
     background-image : url();
-    background-size: 100%;
-    background-position: 50% 10%;
-    background-repeat: no-repeat;
-    background-position:  top 10px;
+    background-size: 110%;
+    background-repeat: repeat-x;
     padding: 24em 3% 4em 10%;
     display: grid;
     grid-template-columns: 28vh 23vh;
-    /* grid-template-columns: 50% 50%; */
+    animation: animate 160s linear infinite;
+    transition: all 1s ease;
 
     
+}
+
+
+@keyframes animate {
+    0%{
+        background-position: 50% 25%;
+    }
+    100%{
+        background-position: -1920px 25%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .grid{
+        background-size: 250%;
+        background-repeat: repeat-x round;
+    }
 }
 
 #icon{
@@ -110,7 +126,8 @@
     font-weight: 400;
     font-size: 15vh;
     text-shadow: 0 0 7px rgb(136, 136, 136);;
-    color: #FFFFFF;}
+    color: #FFFFFF;
+}
 
 
 .city {
@@ -134,6 +151,7 @@
     font-size: 3vh;
     font-weight: 200;
     color: #FFFFFF;
+    opacity: 1;
 }
 
 @media only screen and (max-width: 600px) {
@@ -143,7 +161,7 @@
     #icon {height: 65%;
     width: 65%;
     padding-top: 10%;}
-    .temp{font-size: 10vh;
+    .temp{font-size: 13vh;
     padding-left: 10%;}
     .city {font-size: 4vh;
         padding-right: 20%;}
