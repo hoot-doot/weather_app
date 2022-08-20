@@ -1,6 +1,6 @@
 # weather_app
 
-#### Weather App to show current temp of Amargadhi
+## Weather App to show current temp of Amargadhi
 
 
 ### The config file must be configured
