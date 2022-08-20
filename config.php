@@ -13,6 +13,6 @@ if (!$conn) {
 }
 // echo "<b>Database Connected successfully</b>";
 
-$apiKey = 'b40d8f05585be5b580c1098cd73754d7';
+$apiKey = '#################';
 
 ?>
