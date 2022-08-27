@@ -14,7 +14,7 @@
 
 #### - database and table should be created before running the application
 
-link to actual website : http://anshuchaudhary-2226182.infinityfreeapp.com/
+link to actual website : http://anshuchaudhary-2226182.infinityfreeapp.com/base.html
 
 
 ---
