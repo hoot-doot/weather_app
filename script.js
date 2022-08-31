@@ -7,18 +7,7 @@ function openNav() {
 function closeNav() {
   // changes width to 0 to close
   document.getElementById("mySidenav").style.width = "0";
-
 }
-
-// check if the local storage is not empty and created before 5 mins
-if(localStorage.when != null
-  && (parseInt(localStorage.when) + (60000*5) > Date.now())) {
-    localStr(); // if true
-} 
-else {
-  weather_api(); // if false
-}
-
 
 // function to store data in local storage
 function localStr() {
@@ -85,7 +74,7 @@ function localStr() {
 
 // function to fetch data from api
 function weather_api() {
-  fetch("http://localhost/weather_app/extraction.php") 
+  fetch("http://localhost/wa2/extraction.php") 
   .then((response) => response.json()) // converts to json
   .then((data) => {
       console.log("local storage updated");
@@ -208,7 +197,7 @@ function weather_api() {
 }
 
 // function for client side time and changing bg according to time
-(function time_bg() {
+function time_bg() {
   // get current date and time
   const timeNow = new Date().getHours(); // comment this line and uncomment line below to test bg change based on time
   // const timeNow = 12;
@@ -224,7 +213,7 @@ function weather_api() {
 
   
   var time_condition = timeNow; // from the current times checks if night day sunrise or sunset
-  if (timeNow < 2 || timeNow > 19){
+  if (timeNow < 2 || timeNow > 18){
     time_condition = "Night";
   } else if (timeNow > 14){
     time_condition = "Set";
@@ -258,7 +247,7 @@ function weather_api() {
       document.querySelector(".weather_app").style.backgroundImage = "url('./pics/night\ fr.png')";
       break
   }
-})();
+};
 
 // function to change weather images according to weather condition
 function weather_bg(main) {
@@ -295,3 +284,16 @@ function weather_bg(main) {
       break
     }
   }
+
+// main 
+(function main() {
+  time_bg()
+  // check if the local storage is not empty and created before 5 mins
+  if(localStorage.when != null
+    && (parseInt(localStorage.when) + (60000*5) > Date.now())) {
+      localStr(); // if true
+  } 
+  else {
+    weather_api(); // if false
+  }
+})();
