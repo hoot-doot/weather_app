@@ -26,4 +26,4 @@ link to actual website : http://anshuchaudhary-2226182.infinityfreeapp.com/
 
 ![weather_app](https://github.com/hoot-doot/weather_app/blob/main/result/img1.png)
 
-<img src="https://github.com/hoot-doot/weather_app/blob/main/result/img2.png" width="75%" height="75%">
+<img src="https://github.com/hoot-doot/weather_app/blob/main/result/img2.png" width="55%" height="55%">
