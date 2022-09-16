@@ -55,7 +55,7 @@ CREATE TABLE `api` (
   `hourly3_img` varchar(45) DEFAULT NULL,
   `hourly4_img` varchar(45) DEFAULT NULL,
   `hourly5_img` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`lat`)
+  PRIMARY KEY (`currentTime`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
