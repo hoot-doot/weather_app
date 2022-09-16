@@ -22,6 +22,8 @@ link to actual website : http://anshuchaudhary-2226182.infinityfreeapp.com/
 ---
 
 
-![weather_app](https://github.com/hoot-doot/weather_app/blob/main/result/img3.png)
+![weather_app](https://github.com/hoot-doot/weather_app/blob/main/result/img1.5.png)
+
 ![weather_app](https://github.com/hoot-doot/weather_app/blob/main/result/img1.png)
+
 ![weather_app](https://github.com/hoot-doot/weather_app/blob/main/result/img2.png)
