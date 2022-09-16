@@ -23,6 +23,6 @@ link to actual website : http://anshuchaudhary-2226182.infinityfreeapp.com/
 
 
 
-![weather_app](/result/img3)
-![weather_app](/result/img1)
-![weather_app](/result/img2)
+![weather_app](./result/img3)
+![weather_app](./result/img1)
+![weather_app](./result/img2)
