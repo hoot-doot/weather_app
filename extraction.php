@@ -58,10 +58,11 @@ $sql_for_data_getter = mysqli_query($conn, "SELECT * FROM `api` ORDER BY current
 	{
 		while ($rowdata = mysqli_fetch_object($sql_for_data_getter)) 
 		{   
-            // if data over an hour old updates data
-            if (($rowdata->currentTime) <= ($currentTime - 3600)){
-                $updateTable = mysqli_query($conn,"UPDATE `api` SET `lat` = '$lat', `lon` = '$lon', `currentTime` = '$currentTime', `main` = '$main', `desc` = '$desc', `temp` = '$temp', `pressure` = '$pressure', `humidity` = '$humidity', `feels_like` = '$feels_like', `sunrise` = '$sunrise', `wind_gust` = '$wind_gust', `sunset` = '$sunset', `wind_speed` = '$wind_speed', `wind_deg` = '$wind_deg', `dew_point` = '$dew_point', `hour0` = '$hour0', `hour1` = '$hour1', `hour2` = '$hour2', `hour3` = '$hour3', `hour4` = '$hour4', `hour5` = '$hour5', `tomorrowTemp` = '$tomorrowTemp', `afterTemp` = '$afterTemp', `d_tomorrow_img` = '$d_tomorrow_img', `d_after_img` = '$d_after_img', `hourly0_img` = '$hourly0_img', `hourly1_img` = '$hourly1_img', `hourly2_img` = '$hourly2_img', `hourly3_img` = '$hourly3_img', `hourly4_img` = '$hourly4_img', `hourly5_img` = '$hourly5_img' WHERE (`lat` = '29.3088');") or die(mysqli_error($conn));
-            }
+		    // if data over an hour old updates data
+		    if (($rowdata->currentTime) <= ($currentTime - 3600)){
+			$add_data = mysqli_query($conn, "INSERT INTO `api` (`lat`, `lon`, `currentTime`, `main`, `desc`, `temp`, `pressure`, `humidity`, `feels_like`, `sunrise`, `wind_gust`, `sunset`, `wind_speed`, `wind_deg`, `dew_point`, `visibility`, `hour0`, `hour1`, `hour2`, `hour3`, `hour4`, `hour5`, `tomorrowTemp`, `afterTemp`, `d_tomorrow_img`, `d_after_img`, `hourly0_img`, `hourly1_img`, `hourly2_img`, `hourly3_img`, `hourly4_img`, `hourly5_img`) VALUES ('$lat', '$lon', '$currentTime', '$main', '$desc', '$temp', '$pressure', '$humidity', '$feels_like', '$sunrise', '$wind_gust', '$sunset', '$wind_speed', '$wind_deg', '$dew_point', '$visibility', '$hour0', '$hour1', '$hour2', '$hour3', '$hour4', '$hour5', '$tomorrowTemp', '$afterTemp', '$d_tomorrow_img', '$d_after_img', '$hourly0_img', '$hourly1_img', '$hourly2_img', '$hourly3_img', '$hourly4_img', '$hourly5_img');
+        		") or die(mysqli_error($conn));
+		    }
 		}
 	}
 	else // else adds data
@@ -72,7 +73,7 @@ $sql_for_data_getter = mysqli_query($conn, "SELECT * FROM `api` ORDER BY current
 
 
 // selects data from db
-$sql = "select * from api";
+$sql = "SELECT * FROM `api` ORDER BY currentTime DESC limit 1";
 $result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
 
 $emparray = array();
